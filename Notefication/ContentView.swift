@@ -9,13 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+  init() {
+    UITableView.appearance().separatorStyle = .none
+  }
+  
+  var body: some View {
+    NavigationView{
+      ScrollView(){
+        ForEach(0 ..< 10) { item in
+          NavigationLink(destination: NoteDetail()) {
+            Card(noteText: "Notification text will be here here is more notification text.. ")
+          }
+        }
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
