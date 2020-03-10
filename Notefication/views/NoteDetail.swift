@@ -9,13 +9,17 @@
 import SwiftUI
 
 struct NoteDetail: View {
-    var body: some View {
-        Text("Hello, World!")
-    }
-}
-
-struct NoteDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        NoteDetail()
-    }
+  var note: NoteEntity
+  var body: some View {
+    VStack{
+      Text(note.body ?? "NO TEXT GIVEN")
+      List {
+        HStack{
+          Text("Date Added")
+          Spacer()
+          Text("\(note.addedDate!.description)")
+        }
+      }
+    }.navigationBarTitle("Note Detail")
+  }
 }

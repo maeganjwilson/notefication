@@ -14,11 +14,12 @@ struct Card: View {
   var midColor: Color = Color(UIColor(named:"gradientColorTwo")!)
   var endColor: Color = Color(UIColor(named:"gradientColorThree")!)
   var horizontalPadding: CGFloat = 10.0
-  var noteText: String
+  
+  var note: NoteEntity
   
   var body: some View {
     HStack{
-      Text(noteText)
+      Text(note.body ?? "NO TEXT GIVEN")
         .font(.subheadline)
         .multilineTextAlignment(.leading)
         .lineLimit(2)
@@ -38,12 +39,12 @@ struct Card: View {
   }
 }
 
-struct Card_Previews: PreviewProvider {
-  static var previews: some View {
-    //   Card(noteText: "Here is the text for the notification\nNotification text will be here\nNotification text will be here")
-    Group{
-      Card(noteText: "Here is the text for notifications").colorScheme(.light)
-      Card(noteText: "Here is the text for notifications").colorScheme(.dark)
-    }
-  }
-}
+//struct Card_Previews: PreviewProvider {
+//  static var previews: some View {
+//    //   Card(noteText: "Here is the text for the notification\nNotification text will be here\nNotification text will be here")
+//    Group{
+//      Card(noteText: "Here is the text for notifications").colorScheme(.light)
+//      Card(noteText: "Here is the text for notifications").colorScheme(.dark)
+//    }
+//  }
+//}
