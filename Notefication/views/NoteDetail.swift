@@ -7,19 +7,87 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct NoteDetail: View {
+  @Environment(\.managedObjectContext) var context
+  @State private var isNotified: Bool = false
+  @State private var isArchived: Bool = false
   var note: NoteEntity
   var body: some View {
-    VStack{
-      Text(note.body ?? "NO TEXT GIVEN")
-      List {
-        HStack{
-          Text("Date Added")
-          Spacer()
-          Text("\(note.addedDate!.description)")
+    VStack(alignment: .leading){
+      HStack{
+        Text(note.body ?? "NO TEXT GIVEN")
+      }
+      Form {
+        // MARK: Toggle
+        Toggle(isOn: Binding(
+          get: {
+            self.isNotified
+        }, set: {(newValue) in
+          self.isNotified = newValue
+          self.updateIsNotified()
+        })) {
+          Text("Notify?")
+        }
+        Section{
+          HStack{
+            Text("Date Last Modified")
+            Spacer()
+            Text("\(note.modifiedDate!.description)")
+          }
+          HStack{
+            Text("Date Added")
+            Spacer()
+            Text("\(note.addedDate!.description)")
+          }
+        }
+        // MARK: Button
+        Button(action: {
+          self.archiveNote()
+        }){
+          Text("Archive")
+            .foregroundColor(isArchived ? Color.green : Color.red)
         }
       }
-    }.navigationBarTitle("Note Detail")
+    }.listStyle(GroupedListStyle())
+    .navigationBarTitle("Note Detail")
+      .onAppear {
+        self.isArchived = self.note.isArchived
+        self.isNotified = self.note.isNotified
+    }
+  }
+  
+  func updateIsNotified(){
+    let noteID: NSUUID = note.id! as NSUUID
+    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "NoteEntity")
+    fetchRequest.predicate = NSPredicate(format: "id == %@", noteID as CVarArg)
+    fetchRequest.fetchLimit = 1
+    do {
+      let test = try context.fetch(fetchRequest)
+      let noteUpdate = test[0] as! NSManagedObject
+      noteUpdate.setValue(isNotified, forKey: "isNotified")
+      noteUpdate.setValue(Date(), forKey: "modifiedDate")
+      try context.save()
+    } catch {
+      print(error)
+    }
+  }
+  
+  func archiveNote() {
+    isArchived.toggle()
+    let noteID: NSUUID = note.id! as NSUUID
+    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "NoteEntity")
+    fetchRequest.predicate = NSPredicate(format: "id == %@", noteID as CVarArg)
+    fetchRequest.fetchLimit = 1
+    do {
+      let test = try context.fetch(fetchRequest)
+      let noteUpdate = test[0] as! NSManagedObject
+      noteUpdate.setValue(isArchived, forKey: "isArchived")
+      noteUpdate.setValue(Date(), forKey: "modifiedDate")
+      try context.save()
+    } catch {
+      print(error)
+    }
   }
 }

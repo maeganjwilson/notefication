@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37A32CF9240DDFBE00FEBF89 /* NotificationGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */; };
+		37C6497924170DD9002A9DD7 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6497824170DD9002A9DD7 /* AddNoteView.swift */; };
 		37EB6023240882E80088EEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB6022240882E80088EEAE /* AppDelegate.swift */; };
 		37EB6025240882E80088EEAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB6024240882E80088EEAE /* SceneDelegate.swift */; };
 		37EB6028240882E80088EEAE /* Notefication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37EB6026240882E80088EEAE /* Notefication.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationGradient.swift; sourceTree = "<group>"; };
+		37C6497824170DD9002A9DD7 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		37EB601F240882E80088EEAE /* Notefication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notefication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB6022240882E80088EEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EB6024240882E80088EEAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				37EB603A2408834E0088EEAE /* Card.swift */,
 				37EB603C240888F70088EEAE /* NoteDetail.swift */,
 				37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */,
+				37C6497824170DD9002A9DD7 /* AddNoteView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				37EB602A240882E80088EEAE /* ContentView.swift in Sources */,
 				37A32CF9240DDFBE00FEBF89 /* NotificationGradient.swift in Sources */,
 				37EB603D240888F70088EEAE /* NoteDetail.swift in Sources */,
+				37C6497924170DD9002A9DD7 /* AddNoteView.swift in Sources */,
 				37EB6028240882E80088EEAE /* Notefication.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
