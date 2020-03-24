@@ -18,6 +18,7 @@ struct NoteDetail: View {
     VStack(alignment: .leading){
       HStack{
         Text(note.body ?? "NO TEXT GIVEN")
+          .padding(.leading)
       }
       Form {
         // MARK: Toggle
@@ -34,12 +35,12 @@ struct NoteDetail: View {
           HStack{
             Text("Date Last Modified")
             Spacer()
-            Text("\(note.modifiedDate!.description)")
+            Text("\(note.modifiedDate!.toReadableString())")
           }
           HStack{
             Text("Date Added")
             Spacer()
-            Text("\(note.addedDate!.description)")
+            Text("\(note.addedDate!.toReadableString())")
           }
         }
         // MARK: Button

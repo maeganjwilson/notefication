@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		37A32CF9240DDFBE00FEBF89 /* NotificationGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */; };
 		37C6497924170DD9002A9DD7 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6497824170DD9002A9DD7 /* AddNoteView.swift */; };
+		37CB6A2C24298252004855AD /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB6A2B24298252004855AD /* DateExtensions.swift */; };
 		37EB6023240882E80088EEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB6022240882E80088EEAE /* AppDelegate.swift */; };
 		37EB6025240882E80088EEAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB6024240882E80088EEAE /* SceneDelegate.swift */; };
 		37EB6028240882E80088EEAE /* Notefication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37EB6026240882E80088EEAE /* Notefication.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationGradient.swift; sourceTree = "<group>"; };
 		37C6497824170DD9002A9DD7 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		37CB6A2B24298252004855AD /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		37EB601F240882E80088EEAE /* Notefication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notefication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB6022240882E80088EEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EB6024240882E80088EEAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37CB6A2A2429823E004855AD /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				37CB6A2B24298252004855AD /* DateExtensions.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
 		37EB6016240882E70088EEAE = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		37EB6021240882E80088EEAE /* Notefication */ = {
 			isa = PBXGroup;
 			children = (
+				37CB6A2A2429823E004855AD /* helper */,
 				37EB60392408831B0088EEAE /* views */,
 				37EB6022240882E80088EEAE /* AppDelegate.swift */,
 				37EB6024240882E80088EEAE /* SceneDelegate.swift */,
@@ -174,6 +185,7 @@
 				37EB603B2408834E0088EEAE /* Card.swift in Sources */,
 				37EB602A240882E80088EEAE /* ContentView.swift in Sources */,
 				37A32CF9240DDFBE00FEBF89 /* NotificationGradient.swift in Sources */,
+				37CB6A2C24298252004855AD /* DateExtensions.swift in Sources */,
 				37EB603D240888F70088EEAE /* NoteDetail.swift in Sources */,
 				37C6497924170DD9002A9DD7 /* AddNoteView.swift in Sources */,
 				37EB6028240882E80088EEAE /* Notefication.xcdatamodeld in Sources */,

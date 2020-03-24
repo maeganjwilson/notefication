@@ -13,9 +13,12 @@ struct Card: View {
   var startColor: Color = Color(UIColor(named:"gradientColorOne")!)
   var midColor: Color = Color(UIColor(named:"gradientColorTwo")!)
   var endColor: Color = Color(UIColor(named:"gradientColorThree")!)
+  var fontColor: Color = Color(UIColor(named: "CardTextColor")!)
   var horizontalPadding: CGFloat = 10.0
   
   var note: NoteEntity
+  
+  @State private var isNotified: Bool = false
   
   var body: some View {
     HStack{
@@ -25,17 +28,31 @@ struct Card: View {
         .lineLimit(2)
         .padding(.leading)
       Spacer()
+      VStack(alignment: .trailing){
+        Text("Modded: \(note.modifiedDate!.toReadableString())")
+          .font(.subheadline)
+        Button(action: {
+          print("toggle notification")
+        }){
+          isNotified ? Image(systemName: "bell") : Image(systemName: "bell.slash.fill")
+        }
+      }
+      .padding(.trailing)
     }
+    .foregroundColor(fontColor)
     .frame(width: 350.0,height: 100)
     .background(
       LinearGradient(
-      gradient: Gradient(colors: [startColor, midColor, endColor]),
-      startPoint: .bottomTrailing,
-      endPoint: .topLeading
+        gradient: Gradient(colors: [startColor, midColor, endColor]),
+        startPoint: .bottomTrailing,
+        endPoint: .topLeading
+      )
     )
-    )
-    .cornerRadius(cornerRadius)
-    .padding(.bottom)
+      .cornerRadius(cornerRadius)
+      .padding(.bottom)
+      .onAppear {
+        self.isNotified = self.note.isNotified
+    }
   }
 }
 
