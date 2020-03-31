@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
   @Environment(\.managedObjectContext) var context
+  @Environment(\.notCentKey) var center
   
   @FetchRequest(
     entity: NoteEntity.entity(),

@@ -32,6 +32,7 @@ struct Card: View {
         Text("Modded: \(note.modifiedDate!.toReadableString())")
           .font(.subheadline)
         Button(action: {
+          // TODO: Add action to toggle notification correctly
           print("toggle notification")
         }){
           isNotified ? Image(systemName: "bell") : Image(systemName: "bell.slash.fill")
