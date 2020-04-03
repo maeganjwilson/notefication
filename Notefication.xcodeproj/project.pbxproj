@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378A57D22432C1CE00FA5EF5 /* NotificationCenterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A57D12432C1CE00FA5EF5 /* NotificationCenterKey.swift */; };
 		37A32CF9240DDFBE00FEBF89 /* NotificationGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */; };
 		37C6497924170DD9002A9DD7 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6497824170DD9002A9DD7 /* AddNoteView.swift */; };
 		37CB6A2C24298252004855AD /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB6A2B24298252004855AD /* DateExtensions.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		378A57D12432C1CE00FA5EF5 /* NotificationCenterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterKey.swift; sourceTree = "<group>"; };
 		37A32CF8240DDFBE00FEBF89 /* NotificationGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationGradient.swift; sourceTree = "<group>"; };
 		37C6497824170DD9002A9DD7 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		37CB6A2B24298252004855AD /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				37CB6A2B24298252004855AD /* DateExtensions.swift */,
+				378A57D12432C1CE00FA5EF5 /* NotificationCenterKey.swift */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37EB6023240882E80088EEAE /* AppDelegate.swift in Sources */,
+				378A57D22432C1CE00FA5EF5 /* NotificationCenterKey.swift in Sources */,
 				37EB6025240882E80088EEAE /* SceneDelegate.swift in Sources */,
 				37EB603B2408834E0088EEAE /* Card.swift in Sources */,
 				37EB602A240882E80088EEAE /* ContentView.swift in Sources */,
